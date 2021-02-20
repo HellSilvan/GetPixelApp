@@ -74,7 +74,7 @@ namespace GetPixelApp
 
         private void TimerColor_Elapsed(object sender, ElapsedEventArgs e)
         {
-            System.Drawing.Color color = GetColorAt(new System.Drawing.Point(960, 100));
+            System.Drawing.Color color = GetColorAt(new System.Drawing.Point(960, 50));
             try
             {
                 this.Dispatcher.Invoke(() =>
@@ -87,8 +87,8 @@ namespace GetPixelApp
             {
                 this.Close();
             }
-            
-            if(color.ToArgb() == System.Drawing.Color.Red.ToArgb())
+
+            if (color.ToArgb() == System.Drawing.Color.FromArgb(0, 177, 42, 38).ToArgb())
             {
                 timerBomb.Start();
                 timerColor.Stop();
